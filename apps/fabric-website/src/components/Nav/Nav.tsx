@@ -25,7 +25,7 @@ export interface INavState {
 export interface INavLocalItems {
   defaultSortState?: NavSortType;
 }
-
+//sdfsdfsdf
 export class Nav extends React.Component<INavProps, INavState> {
   private _localItems: INavLocalItems;
 
@@ -34,8 +34,8 @@ export class Nav extends React.Component<INavProps, INavState> {
 
     this._localItems = !!window.localStorage
       ? {
-          defaultSortState: NavSortType[localStorage.getItem('defaultSortState') as keyof typeof NavSortType]
-        }
+        defaultSortState: NavSortType[localStorage.getItem('defaultSortState') as keyof typeof NavSortType]
+      }
       : {};
 
     this.state = {
@@ -265,8 +265,8 @@ export class Nav extends React.Component<INavProps, INavState> {
               defaultSortState === NavSortType.alphabetized
                 ? 'Ascending'
                 : defaultSortState === NavSortType.categories
-                ? 'GroupedList'
-                : undefined
+                  ? 'GroupedList'
+                  : undefined
           }}
           styles={sortButtonStyles}
           menuIconProps={{ iconName: '' }}
